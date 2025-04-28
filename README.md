@@ -106,7 +106,7 @@ git push origin vX.Y.Z
 
 For example, to create and push version 1.0.0:
 ```bash
-git tag -a v1.0.0 -m "Release version 1.0.0"
+git tag -a v1.0.0 -m "First stable release"
 git push origin v1.0.0
 ```
 
