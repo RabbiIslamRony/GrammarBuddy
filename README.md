@@ -51,8 +51,15 @@ A powerful Chrome extension that provides smart text suggestions and improvement
 ## Development
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js (v22.15.0 or higher)
+  - We recommend using [nvm](https://github.com/nvm-sh/nvm) to manage Node.js versions
+  - The project includes an `.nvmrc` file for automatic version switching
+  - To use the correct version:
+    ```bash
+    nvm install
+    nvm use
+    ```
+- npm (v10.2.4 or higher) or yarn (v1.22.19 or higher)
 
 ### Setup
 1. Clone the repository:
@@ -77,6 +84,42 @@ npm run build
 - `npm run format`: Format code using Prettier
 - `npm run lint`: Lint code using ESLint
 - `npm run test`: Run tests
+
+### Creating a Release
+To create a new release:
+
+1. Make sure all changes are committed:
+```bash
+git add .
+git commit -m "Your commit message"
+```
+
+2. Create a new tag (replace X.Y.Z with your version number):
+```bash
+git tag -a vX.Y.Z -m "Release version X.Y.Z"
+```
+
+3. Push the tag to GitHub:
+```bash
+git push origin vX.Y.Z
+```
+
+For example, to create and push version 1.0.0:
+```bash
+git tag -a v1.0.0 -m "Release version 1.0.0"
+git push origin v1.0.0
+```
+
+The GitHub Actions workflow will automatically:
+- Build the extension
+- Create a new release
+- Upload the built files
+- Create a release artifact
+
+You can verify the release by:
+1. Going to your GitHub repository
+2. Clicking on "Releases" in the right sidebar
+3. Checking your new release with the built files
 
 ## Contributing
 
