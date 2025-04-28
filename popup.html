@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GrammarBuddy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-extension">
+  <div class="container">
+    <div class="header">
+      <h1>GrammarBuddy</h1>
+      <div class="controls">
+        <label class="switch">
+          <input type="checkbox" id="enableExtension">
+          <span class="slider round"></span>
+        </label>
+        <span>Enable</span>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="test-area">
+        <div class="test-input">
+          <textarea id="testText" placeholder="Type or paste text here to get suggestions..."></textarea>
+          <div class="button-group">
+            <button id="getSuggestions" class="button primary">Get Suggestions</button>
+            <button id="regenerateSuggestions" class="button secondary" disabled>Regenerate</button>
+            <button id="clearText" class="button secondary">Clear</button>
+          </div>
+        </div>
+        <div id="testSuggestions" class="suggestions-container"></div>
+      </div>
+
+      <div class="settings-section">
+        <div class="api-config">
+          <div class="api-input">
+            <input type="password" id="apiKey" placeholder="Enter your API key">
+            <button id="toggleKey" class="icon-button" title="Show/Hide API Key">Show</button>
+          </div>
+          <div class="api-status">
+            <span id="apiStatusText">Not Connected</span>
+            <button id="connectApi" class="button">Connect API</button>
+          </div>
+          <div id="apiStatus" class="status"></div>
+        </div>
+
+        <div class="mode-selector">
+          <select id="suggestionMode">
+            <option value="improve">Improve</option>
+            <option value="formal">Make Formal</option>
+            <option value="casual">Make Casual</option>
+            <option value="shorten">Shorten</option>
+            <option value="expand">Expand</option>
+            <option value="grammar">Fix Grammar</option>
+            <option value="translation">Translate to Bangla</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="shortcuts">
+        <h3>Keyboard Shortcuts</h3>
+        <ul>
+          <li><kbd>1-9</kbd> Select suggestion</li>
+          <li><kbd>Esc</kbd> Close suggestions</li>
+          <li><kbd>Ctrl/Cmd + C</kbd> Copy selected</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
