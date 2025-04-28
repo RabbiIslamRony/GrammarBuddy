@@ -399,14 +399,16 @@ body.popup-extension {
 
 /* Footer */
 .popup-extension .footer {
-  border-top: 1px solid #eee;
+  margin-top: 20px;
   padding-top: 15px;
-  margin-top: 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .popup-extension .shortcuts {
-  font-size: 12px;
-  color: #666;
+  margin-bottom: 10px;
 }
 
 .popup-extension .shortcuts ul {
@@ -415,23 +417,53 @@ body.popup-extension {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 .popup-extension .shortcuts li {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  font-size: 12px;
+  color: #666;
 }
 
 .popup-extension kbd {
-  background: #f1f3f4;
+  background-color: #f1f3f4;
   border: 1px solid #dadce0;
   border-radius: 4px;
-  padding: 3px 6px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #444;
+  display: inline-block;
   font-size: 11px;
-  font-family: monospace;
-  color: #3c4043;
+  line-height: 1;
+  padding: 4px 6px;
+  white-space: nowrap;
+}
+
+.popup-extension .copyright {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.popup-extension .copyright p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.popup-extension .copyright a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.popup-extension .copyright a:hover {
+  color: #1557b0;
+  text-decoration: underline;
 }
 
 /* Loading State */

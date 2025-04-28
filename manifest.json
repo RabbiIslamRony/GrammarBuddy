@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Smart Word Typing Suggestion",
+  "name": "Grammar Buddy",
   "version": "1.0",
   "description": "Get smart suggestions for your text",
   "permissions": [

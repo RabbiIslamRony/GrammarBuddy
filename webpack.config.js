@@ -23,6 +23,13 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'icons/[name][ext]'
+        }
       }
     ]
   },
@@ -32,7 +39,13 @@ module.exports = {
         { from: 'manifest.json', to: 'manifest.json' },
         { from: 'popup.html', to: 'popup.html' },
         { from: 'styles.css', to: 'styles.css' },
-        { from: 'icons', to: 'icons' }
+        { 
+          from: 'icons',
+          to: 'icons',
+          globOptions: {
+            ignore: ['**/.DS_Store']
+          }
+        }
       ]
     })
   ]
